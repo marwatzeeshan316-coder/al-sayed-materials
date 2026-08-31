@@ -63,32 +63,69 @@
             z-index: -1;
         }
 
-        /* Navigation Bar with Search Bar */
+        /* Navigation Bar with Search Bar & Mobile Hamburger Menu */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
-            background: rgba(6, 11, 20, 0.9);
+            padding: 12px 5%;
+            background: rgba(6, 11, 20, 0.95);
             backdrop-filter: blur(14px);
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(2, 132, 199, 0.2);
-            flex-wrap: wrap;
-            gap: 15px;
         }
 
         .logo-container img {
-            height: 45px;
+            height: 40px;
             width: auto;
             display: block;
         }
 
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Search Bar Style */
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 4px 8px;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            font-size: 0.85rem;
+            padding: 3px;
+            width: 100px;
+        }
+
+        .search-box input::placeholder {
+            color: #94a3b8;
+        }
+
+        .search-box button {
+            background: transparent;
+            border: none;
+            color: #0284c7;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        /* Navigation Links & Hamburger */
         .nav-links {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
             gap: 15px;
         }
 
@@ -104,56 +141,46 @@
             color: #f97316;
         }
 
-        /* Search Bar Style */
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid #334155;
-            border-radius: 6px;
-            padding: 4px 10px;
-        }
-
-        .search-box input {
-            background: transparent;
-            border: none;
-            color: white;
-            outline: none;
-            font-size: 0.9rem;
-            padding: 4px;
-            width: 130px;
-        }
-
-        .search-box input::placeholder {
-            color: #94a3b8;
-        }
-
-        .search-box button {
-            background: transparent;
-            border: none;
-            color: #0284c7;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.85rem;
-        }
-
         .btn-quote-nav {
             background: linear-gradient(135deg, #f97316, #ea580c) !important;
             color: white !important;
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 6px;
+        }
+
+        /* Mobile Hamburger Toggle Button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #f1f5f9;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
         /* Hero Section */
         .hero {
-            padding: 120px 5% 80px 5%;
+            padding: 90px 5% 60px 5%;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
             color: #ffffff;
+            line-height: 1.2;
         }
 
         .hero h1 span {
@@ -161,89 +188,97 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #94a3b8;
             max-width: 750px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 25px auto;
         }
 
         .hero-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .btn-primary {
             background-color: #f97316;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 22px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.95rem;
         }
 
         .btn-secondary {
             background-color: transparent;
             color: #cbd5e1;
-            padding: 12px 25px;
+            padding: 12px 22px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.95rem;
             border: 1px solid #334155;
         }
 
         /* Main Content Grid */
         .container {
-            padding: 70px 5%;
+            padding: 50px 5%;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .section-header h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            font-size: 0.95rem;
+            color: #94a3b8;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background: rgba(17, 24, 39, 0.75);
             backdrop-filter: blur(10px);
             border-radius: 10px;
-            padding: 30px 25px;
+            padding: 25px 20px;
             border: 1px solid rgba(30, 41, 59, 0.8);
         }
 
         .card h3 {
             color: #f97316;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
         }
 
         .card p {
             color: #94a3b8;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
         .card-link {
             color: #38bdf8;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
         /* Project / Photo Gallery Section */
         .projects-showcase {
-            padding: 50px 5%;
+            padding: 45px 5%;
             background: rgba(11, 19, 41, 0.4);
             border-top: 1px solid rgba(30, 41, 59, 0.5);
             border-bottom: 1px solid rgba(30, 41, 59, 0.5);
@@ -251,8 +286,8 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -272,32 +307,32 @@
 
         .project-card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
             display: block;
             border-bottom: 1px solid #1e293b;
         }
 
         .project-info {
-            padding: 20px;
+            padding: 18px;
         }
 
         .project-info h3 {
             color: #ffffff;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
         }
 
         .project-info p {
             color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+            font-size: 0.88rem;
+            margin-bottom: 12px;
         }
 
         /* About Section */
         .local-seo-section {
             background: rgba(11, 19, 41, 0.6);
-            padding: 60px 5%;
+            padding: 50px 5%;
             border-top: 1px solid #1e293b;
             border-bottom: 1px solid #1e293b;
         }
@@ -308,42 +343,45 @@
         }
 
         .local-seo-content h2 {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .local-seo-content p {
             color: #94a3b8;
-            margin-bottom: 15px;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
         }
 
         /* Footer WhatsApp CTA */
         .footer-cta {
-            padding: 60px 5%;
+            padding: 50px 5%;
             text-align: center;
             background: linear-gradient(180deg, rgba(8, 14, 26, 0.7) 0%, rgba(3, 6, 12, 0.95) 100%);
         }
 
         .footer-cta h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .footer-cta p {
             color: #94a3b8;
-            margin-bottom: 25px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
         .btn-whatsapp {
             display: inline-block;
             background-color: #25d366;
             color: white;
-            padding: 12px 30px;
+            padding: 12px 28px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.95rem;
         }
 
         footer {
@@ -351,7 +389,60 @@
             padding: 20px;
             background: #020408;
             color: #64748b;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Styles for Mobile Devices */
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(6, 11, 20, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 7%;
+                gap: 15px;
+                border-bottom: 1px solid rgba(2, 132, 199, 0.2);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease-in-out, padding 0.35s ease-in-out;
+            }
+
+            .nav-links.active {
+                max-height: 500px;
+                padding: 20px 7%;
+            }
+
+            nav a {
+                font-size: 1.05rem;
+                width: 100%;
+                padding: 5px 0;
+            }
+
+            .btn-quote-nav {
+                width: 100%;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            .search-box input {
+                width: 85px;
+            }
+
+            .hero {
+                padding: 70px 5% 45px 5%;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -365,12 +456,20 @@
             <a href="index.html"><img src="logo.png" alt="Logo"></a>
         </div>
         
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search materials...">
-            <button onclick="searchWebsite()">Search</button>
+        <div class="header-right">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchWebsite()">Go</button>
+            </div>
+            
+            <button class="menu-toggle" id="mobile-menu" onclick="toggleMenu()" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
 
-        <nav class="nav-links">
+        <nav class="nav-links" id="navLinks">
             <a href="index.html" class="active">Home</a>
             <a href="ourprojects.html">Projects</a>
             <a href="bricks.html">Bricks</a>
@@ -474,24 +573,15 @@
     </footer> 
  
     <script> 
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
         function searchWebsite() { 
             let query = document.getElementById('searchInput').value.toLowerCase(); 
             if(query.includes('brick')) { 
                 window.location.href = 'bricks.html'; 
             } else if(query.includes('cement')) { 
                 window.location.href = 'cement.html'; 
-            } else if(query.includes('sand')) { 
-                window.location.href = 'sand.html'; 
-            } else if(query.includes('crush')) { 
-                window.location.href = 'crush.html'; 
-            } else if(query.includes('project')) { 
-                window.location.href = 'ourprojects.html'; 
-            } else if(query.includes('contact')) { 
-                window.location.href = 'contactus.html'; 
-            } else { 
-                alert('Please type a material name like bricks, cement, sand, or crush.'); 
-            } 
-        } 
-    </script> 
-</body> 
-</html>
+            } else if(query.includes
